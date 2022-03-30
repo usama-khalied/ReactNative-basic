@@ -1,50 +1,58 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, View, Image, Text, Button } from "react-native";
-import { ScreenOrientation } from 'expo';
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet, Button, TouchableOpacity, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+
+
+
+const size = 400;
 
 export default function App() {
-  _setPortrait = () => {
-    ScreenOrientation.allow(ScreenOrientation.Orientation.PORTRAIT);
-  };
-  const handlePress = () => console.log("Text Press")
+  // console.log(require('./assets/icon.png'));
+  const [count, setcount] = useState(0);
+  const onPress = () => {
+    setcount(count + 1);
+  }
+
 
   return (
 
     <SafeAreaView style={styles.container}>
+
+      {/* <Image style={styles.img} source={require('./assets/splash.png')} /> */}
+      <Text> Hellow Count :  {count} </Text>
+      <TouchableOpacity onPress={onPress}>
+        <Image
+          source={{
+            uri: "https://picsum.photos/200/300?grayscale",
+            width: 300,
+            height: 400,
+          }} />
+      </TouchableOpacity>
       <View style={styles.profile}>
-        <Image source={{ uri: 'https://elysator.com/wp-content/uploads/blank-profile-picture-973460_1280-e1523978675847.png' }} style={styles.imageProfile} />
-        <Text style={styles.name}>StackOverFlow</Text>
-        <Button onPress={this._setPortrait} title="Set portrait" />
-        <Spacer />
+        <Button color="red" font-size="30" title='click me' onPress={() => { console.log("Hellow world") }} />
+        <Button color="orange" title='click again' onPress={() => { alert("Nice") }} />
       </View>
-      {/* <Text numberOfLines={1} onPress={handlePress}>: Usama khalied Areally really long text is about then verticl about the horizential </Text> */}
-
-    </SafeAreaView >
-
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
-    backgroundColor: "rgb(106, 90, 205)",
+    backgroundColor: "#fff",
     alignItems: 'center',
     justifyContent: 'center',
-
   },
   profile: {
+    flex: 0,
     flexDirection: 'row',
-    backgroundColor: '#EEE',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 0,
+    width: 100,
+  },
+  img: {
+    height: 150,
     width: 150,
   },
-
-  name: {
-
-    fontSize: 16,
+  btn: {
+    backgroundColor: 'red',
+    color: '#000',
   }
 });
