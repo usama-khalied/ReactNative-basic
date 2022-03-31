@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Button, TouchableOpacity, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import { SafeAreaView, StyleSheet, Button, Alert, TouchableOpacity, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 
 
 
-const size = 400;
+
 
 export default function App() {
   // console.log(require('./assets/icon.png'));
   const [count, setcount] = useState(0);
   const onPress = () => {
     setcount(count + 1);
+
   }
 
 
@@ -28,8 +29,22 @@ export default function App() {
           }} />
       </TouchableOpacity>
       <View style={styles.profile}>
-        <Button color="red" font-size="30" title='click me' onPress={() => { console.log("Hellow world") }} />
-        <Button color="orange" title='click again' onPress={() => { alert("Nice") }} />
+
+
+        <Button color="purple" title='alert' onPress={() => {
+          setcount(count + 1), Alert.alert("My title", "bhai kiya kr rahey ho ", [
+            { text: "Done" },
+            { text: "Cancel" },
+          ])
+        }} />
+
+        <Button color="yellow" title='next' onPress={() => Alert.alert("Nex", "Next Popup", [
+          { text: "Next" },
+          { text: "Close" },
+
+        ])} />
+
+
       </View>
     </SafeAreaView>
   );
