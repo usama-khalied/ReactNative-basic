@@ -38,12 +38,15 @@ export default function App() {
           ])
         }} />
 
-        <Button color="yellow" title='next' onPress={() => Alert.alert("Nex", "Next Popup", [
-          { text: "Next" },
-          { text: "Close" },
 
-        ])} />
+        <Button title='Check' color="red" onPress={() => {
+          Alert.alert("Confirmation", "Are you permission ", [
 
+            { text: "Done" },
+            { text: "Cancel" },
+          ])
+        }} />
+        <Button title='Click me' onPress={() => Alert.prompt("WHAT", "NAME", text => alert(text))} />
 
       </View>
     </SafeAreaView>
