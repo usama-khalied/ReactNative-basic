@@ -13,10 +13,12 @@ export default function App() {
 
   }
 
+  const containerStyle = { backgroundColor: "green" };
+  const styleing1 = { margin: 12 }
 
   return (
 
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, containerStyle, styleing1]}>
 
       {/* <Image style={styles.img} source={require('./assets/splash.png')} /> */}
       <Text> Hellow Count :  {count} </Text>
