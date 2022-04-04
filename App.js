@@ -9,16 +9,26 @@ export default function App() {
   const [hidden, sethidden] = useState(false);
   const [statusbarstyle, setsatusbarstyle] = useState(STYLES[0]);
   const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
+  const changeStatusbarVisibility = () => sethidden(!hidden)
 
+  //Method No 1 
+
+
+
+
+
+
+  // Method No. 2  
   changeStatusbarTransition = () => {
     const transition = TRANSITION.indexOf(statusbartransition) + 1;
     if (transition === TRANSITION.length) {
       setstatusbartransition(TRANSITION[0]);
-      console.log(statusbartransition)
+
     }
     else {
-      setstatusbartransition(TRANSITION[0]);
+      setstatusbartransition(TRANSITION[transition]);
     }
+
   }
 
 
@@ -29,10 +39,15 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar animated={true} backgroundColor="#61dafb"
       />
-      <Text style={styles.textStyle}> </Text>
+      <Text style={styles.textStyle}>
+        StatusBar Visibility:{'\n'}
+        {hidden ? 'Hidden' : 'Visible'}
+
+      </Text>
       <Text style={styles.textStyle}> </Text>
       <View style={styles.buttonsContainer}>
-        <Button onPress={changeStatusbarTransition} title='toggleStatusbar' />
+        <Button onPress={changeStatusbarVisibility} title='toggleStatusbar' />
+        <Button title='Change Status bar Transition' onPress={changeStatusbarTransition} />
       </View>
     </SafeAreaView>
   );
@@ -43,7 +58,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: 'center',
-    alignItems: 'center'    // paddingTop: Platform.OS === 'android' ? 20 : 0,
+    alignItems: 'center'
+    // paddingTop: Platform.OS === 'android' ? 20 : 0,
     // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
 
   },
