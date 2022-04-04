@@ -11,8 +11,14 @@ export default function App() {
   const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
 
   changeStatusbarTransition = () => {
-
-
+    const transition = TRANSITION.indexOf(statusbartransition) + 1;
+    if (transition === TRANSITION.length) {
+      setstatusbartransition(TRANSITION[0]);
+      console.log(statusbartransition)
+    }
+    else {
+      setstatusbartransition(TRANSITION[0]);
+    }
   }
 
 
