@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Button, Alert, TouchableOpacity, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 
 
 
@@ -18,7 +18,7 @@ export default function App() {
 
   return (
 
-    <SafeAreaView style={[styles.container, containerStyle, styleing1]}>
+    <SafeAreaView style={[styles.container2, containerStyle]}>
 
       {/* <Image style={styles.img} source={require('./assets/splash.png')} /> */}
       <Text> Hellow Count :  {count} </Text>
@@ -48,6 +48,11 @@ export default function App() {
             { text: "Cancel" },
           ])
         }} />
+        <Button title='new' onPress={() => Alert.alert("Confirmation", "confirm", [
+          { text: "Done" },
+          { text: "Cancel" }
+
+        ])} />
         <Button title='Click me' onPress={() => Alert.prompt("WHAT", "NAME", text => alert(text))} />
 
       </View>
@@ -59,8 +64,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: 'center',
-    justifyContent: 'center',
+    // paddingTop: Platform.OS === 'android' ? 20 : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+
+  },
+  container2: {
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   profile: {
     flex: 0,
