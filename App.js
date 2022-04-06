@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 
 
-const STYLES = ['default', 'dark-content', 'light-content'];
+
 const TRANSITION = ['fade', 'slide', 'none'];
 
 export default function App() {
   const [hidden, sethidden] = useState(false);
-  const [statusbarstyle, setsatusbarstyle] = useState(STYLES[0]);
+
   const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
   const changeStatusbarVisibility = () => sethidden(!hidden)
 
@@ -30,14 +30,9 @@ export default function App() {
     }
 
   }
-
-
-
-
   return (
-
     <SafeAreaView style={styles.container}>
-      <StatusBar animated={true} backgroundColor="#61dafb"
+      <StatusBar hidden={hidden} animated={true} backgroundColor="#61dafb"
       />
       <Text style={styles.textStyle}>
         StatusBar Visibility:{'\n'}
