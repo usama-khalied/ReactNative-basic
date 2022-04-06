@@ -9,7 +9,11 @@ export default function App() {
   const [hidden, sethidden] = useState(false);
 
   const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
-  const changeStatusbarVisibility = () => sethidden(!hidden)
+  const changeStatusbarVisibility = () => {
+    sethidden(!hidden);
+    alert(hidden)
+  };
+
 
   //Method No 1 
 
@@ -32,7 +36,7 @@ export default function App() {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar hidden={hidden} animated={true} backgroundColor="#61dafb"
+      <StatusBar hidden={hidden} animated={true}
       />
       <Text style={styles.textStyle}>
         StatusBar Visibility:{'\n'}
@@ -42,7 +46,7 @@ export default function App() {
       <Text style={styles.textStyle}> </Text>
       <View style={styles.buttonsContainer}>
         <Button onPress={changeStatusbarVisibility} title='toggleStatusbar' />
-        <Button title='Change Status bar Transition' onPress={changeStatusbarTransition} />
+        <Button title='Change Status bar Transition' onPress={changeStatusbarVisibility} />
       </View>
     </SafeAreaView>
   );
