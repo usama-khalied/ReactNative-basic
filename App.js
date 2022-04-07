@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import React from 'react';
+import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import { useDimensions } from '@react-native-community/hooks';
 
 
-
-const TRANSITION = ['fade', 'slide', 'none'];
+// const TRANSITION = ['fade', 'slide', 'none'];
 
 export default function App() {
-  const [hidden, sethidden] = useState(false);
+  // console.log(Dimensions.get('window'));
+  console.log(useDimensions())
+  // const [hidden, sethidden] = useState(false);
 
-  const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
-  const changeStatusbarVisibility = () => {
-    sethidden(!hidden);
-    alert(hidden)
-  };
+  // const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
+  // const changeStatusbarVisibility = () => {
+  //   sethidden(!hidden);
+  //   alert(hidden)
+  // };
 
 
   //Method No 1 
@@ -23,31 +25,27 @@ export default function App() {
 
 
   // Method No. 2  
-  changeStatusbarTransition = () => {
-    const transition = TRANSITION.indexOf(statusbartransition) + 1;
-    if (transition === TRANSITION.length) {
-      setstatusbartransition(TRANSITION[0]);
+  // changeStatusbarTransition = () => {
+  //   const transition = TRANSITION.indexOf(statusbartransition) + 1;
+  //   if (transition === TRANSITION.length) {
+  //     setstatusbartransition(TRANSITION[0]);
 
-    }
-    else {
-      setstatusbartransition(TRANSITION[transition]);
-    }
+  //   }
+  //   else {
+  //     setstatusbartransition(TRANSITION[transition]);
+  //   }
 
-  }
+  // }
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar hidden={hidden} animated={true}
-      />
-      <Text style={styles.textStyle}>
-        StatusBar Visibility:{'\n'}
-        {hidden ? 'Hidden' : 'Visible'}
+      <View style={{
+        backgroundColor: 'red',
+        width: '100%',
+        height: '30%',
+      }}>
 
-      </Text>
-      <Text style={styles.textStyle}> </Text>
-      <View style={styles.buttonsContainer}>
-        <Button onPress={changeStatusbarVisibility} title='toggleStatusbar' />
-        <Button title='Change Status bar Transition' onPress={changeStatusbarVisibility} />
       </View>
+
     </SafeAreaView>
   );
 }
@@ -56,8 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    justifyContent: 'center',
-    alignItems: 'center'
+
     // paddingTop: Platform.OS === 'android' ? 20 : 0,
     // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
 
