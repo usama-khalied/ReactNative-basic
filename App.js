@@ -1,13 +1,17 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 import { useDimensions } from '@react-native-community/hooks';
 
 
 // const TRANSITION = ['fade', 'slide', 'none'];
 
 export default function App() {
+  console.log(useDimensions());
   // console.log(Dimensions.get('window'));
-  console.log(useDimensions())
+  // const windowWidth = Dimensions.get('window').width;
+  // const heigthWidth = Dimensions.get('window').height;
+  const window = useWindowDimensions();
+  // console.log(useDimensions())
   // const [hidden, sethidden] = useState(false);
 
   // const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
@@ -37,16 +41,23 @@ export default function App() {
 
   // }
   return (
+
     <SafeAreaView style={styles.container}>
+
       <View style={{
         backgroundColor: 'red',
         width: '100%',
         height: '30%',
       }}>
 
+        {/* <Text>
+          {`Window Dimensions : height- ${window.height} , width - ${window.width}`}
+        </Text> */}
+
       </View>
 
     </SafeAreaView>
+
   );
 }
 
