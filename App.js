@@ -6,6 +6,7 @@ import { useDimensions, useDeviceOrientation } from '@react-native-community/hoo
 // const TRANSITION = ['fade', 'slide', 'none'];
 
 export default function App() {
+  // console.log(useDimensions());
   console.log(useDeviceOrientation());
   // console.log(Dimensions.get('window'));
   // const windowWidth = Dimensions.get('window').width;
@@ -20,7 +21,7 @@ export default function App() {
   //   alert(hidden)
   // };
 
-
+  const { landscape } = useDeviceOrientation();
   //Method No 1 
 
 
@@ -47,7 +48,7 @@ export default function App() {
       <View style={{
         backgroundColor: 'red',
         width: '100%',
-        height: '30%',
+        height: landscape ? "100%" : "30%",
       }}>
 
         {/* <Text>
