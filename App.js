@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
-import { useDimensions } from '@react-native-community/hooks';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
 
 // const TRANSITION = ['fade', 'slide', 'none'];
 
 export default function App() {
-  console.log(useDimensions());
+  console.log(useDeviceOrientation());
   // console.log(Dimensions.get('window'));
   // const windowWidth = Dimensions.get('window').width;
   // const heigthWidth = Dimensions.get('window').height;
