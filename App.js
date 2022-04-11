@@ -21,6 +21,7 @@ export default function App() {
   //   alert(hidden)
   // };
 
+
   const { landscape } = useDeviceOrientation();
   //Method No 1 
 
@@ -56,8 +57,8 @@ export default function App() {
         </Text> */}
 
       </View>
-
     </SafeAreaView>
+
 
   );
 }
