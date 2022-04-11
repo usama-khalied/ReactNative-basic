@@ -34,46 +34,24 @@ export default function App() {
 
   return (
 
-    <>
-      <SafeAreaView></SafeAreaView>
-      <View style={styles.styling}>
+    <SafeAreaView>
+      <View>
 
-      </View>
-      <View style={styles.styling2}>
+        <Text>
 
-
-
-      </View>
-      <View style={styles.styling3}>
-
-      </View>
-      <View style={{
-        backgroundColor: 'yellow',
-        flex: 2,
-      }}>
-
+          This is
+        </Text>
 
       </View>
 
-    </>
+
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
 
-  styling: {
-    backgroundColor: 'dodgerblue',
-
-    flex: 1,
-  },
-  styling2: {
-    backgroundColor: 'gold',
-
-    flex: 1,
-  },
-  styling3: {
-    flex: 1,
-    backgroundColor: 'tomato',
   }
 });
 
