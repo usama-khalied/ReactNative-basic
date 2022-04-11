@@ -44,3 +44,46 @@
 
   },
 
+
+
+   <View style={styles.styling}>
+
+      </View>
+      <View style={styles.styling2}>
+
+
+
+      </View>
+      <View style={styles.styling3}>
+
+      </View>
+      <View style={{
+        backgroundColor: 'yellow',
+        flex: 2,
+      }}>
+
+
+      </View>
+  styling: {
+    backgroundColor: 'dodgerblue',
+
+    flex: 1,
+  },
+  styling2: {
+    backgroundColor: 'gold',
+
+    flex: 1,
+  },
+  styling3: {
+    flex: 1,
+    backgroundColor: 'tomato',
+  }
+
+
+
+
+
+
+
+
+
