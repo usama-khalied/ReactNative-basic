@@ -1,0 +1,46 @@
+     {/* <Text>
+          {`Window Dimensions : height- ${window.height} , width - ${window.width}`}
+        </Text> */}
+      {/* <View style={{
+        backgroundColor: 'red',
+        width: '100%',
+        height: landscape ? "100%" : "30%",
+      }}> </View> */}
+
+
+
+  // Method No. 2  
+  // changeStatusbarTransition = () => {
+  //   const transition = TRANSITION.indexOf(statusbartransition) + 1;
+  //   if (transition === TRANSITION.length) {
+  //     setstatusbartransition(TRANSITION[0]);
+
+  //   }
+  //   else {
+  //     setstatusbartransition(TRANSITION[transition]);
+  //   }
+
+  // }
+
+
+  buttonsContainer: {
+    padding: 10,
+  },
+  textStyle: {
+    textAlign: 'center',
+    marginBottom: 8,
+
+  }
+
+
+
+  container: {
+    flex: 1,
+    // paddingTop: Platform.OS === 'android' ? 20 : 0,
+    backgroundColor: "#fff",
+
+    // paddingTop: Platform.OS === 'android' ? 20 : 0,
+    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+
+  },
+
