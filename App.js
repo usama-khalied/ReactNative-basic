@@ -30,58 +30,32 @@ export default function App() {
 
 
 
-  // Method No. 2  
-  // changeStatusbarTransition = () => {
-  //   const transition = TRANSITION.indexOf(statusbartransition) + 1;
-  //   if (transition === TRANSITION.length) {
-  //     setstatusbartransition(TRANSITION[0]);
 
-  //   }
-  //   else {
-  //     setstatusbartransition(TRANSITION[transition]);
-  //   }
-
-  // }
   return (
 
-    <SafeAreaView style={styles.container}>
+    <>
 
-      <View style={{
-        backgroundColor: 'red',
-        width: '100%',
-        height: landscape ? "100%" : "30%",
-      }}>
 
-        {/* <Text>
-          {`Window Dimensions : height- ${window.height} , width - ${window.width}`}
-        </Text> */}
+      <View style={styles.styling}>
 
       </View>
+      <View style={styles.styling2}>
 
 
-    </SafeAreaView>
 
-
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  styling: {
+    backgroundColor: '#fff',
     flex: 1,
-    // paddingTop: Platform.OS === 'android' ? 20 : 0,
-    backgroundColor: "#fff",
-
-    // paddingTop: Platform.OS === 'android' ? 20 : 0,
-    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-
   },
-  buttonsContainer: {
-    padding: 10,
-  },
-  textStyle: {
-    textAlign: 'center',
-    marginBottom: 8,
-
+  styling2: {
+    backgroundColor: 'dodgerblue',
+    flex: 1,
   }
 });
 
