@@ -57,6 +57,8 @@ export default function App() {
         </Text> */}
 
       </View>
+
+
     </SafeAreaView>
 
 
@@ -66,6 +68,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // paddingTop: Platform.OS === 'android' ? 20 : 0,
     backgroundColor: "#fff",
 
     // paddingTop: Platform.OS === 'android' ? 20 : 0,
