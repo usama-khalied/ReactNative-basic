@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 
 // const TRANSITION = ['fade', 'slide', 'none'];
@@ -34,8 +35,7 @@ export default function App() {
   return (
 
     <>
-
-
+      <SafeAreaView></SafeAreaView>
       <View style={styles.styling}>
 
       </View>
@@ -44,18 +44,36 @@ export default function App() {
 
 
       </View>
+      <View style={styles.styling3}>
+
+      </View>
+      <View style={{
+        backgroundColor: 'yellow',
+        flex: 2,
+      }}>
+
+
+      </View>
+
     </>
   );
 }
 
 const styles = StyleSheet.create({
+
   styling: {
-    backgroundColor: '#fff',
+    backgroundColor: 'dodgerblue',
+
     flex: 1,
   },
   styling2: {
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'gold',
+
     flex: 1,
+  },
+  styling3: {
+    flex: 1,
+    backgroundColor: 'tomato',
   }
 });
 
