@@ -38,15 +38,16 @@ export default function App() {
       <View style={{
         backgroundColor: 'dodgerblue',
         flex: 1,
-        alignItems: 'center',
+        alignItems: 'stretch',
         justifyContent: 'center',
-        flexDirection: 'column',
+        flexDirection: 'row',
       }}>
 
         <View style={{
           backgroundColor: 'red',
           width: 100,
           height: 300,
+          alignSelf: "flex-start",
         }}>
         </View>
         <View style={{
@@ -67,36 +68,7 @@ export default function App() {
 
 
 
-      <View style={{
-        backgroundColor: 'green',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexDirection: 'row',
 
-      }}>
-
-        <View style={{
-          backgroundColor: 'red',
-          width: 100,
-          height: 100,
-        }}>
-        </View>
-        <View style={{
-          backgroundColor: 'gold',
-          width: 100,
-          height: 100,
-        }}>
-
-        </View>
-        <View style={{
-          backgroundColor: 'blue',
-          width: 100,
-          height: 100,
-        }}>
-
-        </View>
-      </View>
 
 
     </SafeAreaView>
