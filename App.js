@@ -38,31 +38,35 @@ export default function App() {
       <View style={{
         backgroundColor: 'dodgerblue',
         flex: 1,
-        alignItems: 'stretch',
+        alignItems: 'center',
         justifyContent: 'center',
+        alignContent: 'center',
         flexDirection: 'row',
+        // flexWrap: 'wrap'
+        flexShrink: 1,
+
       }}>
 
         <View style={{
           backgroundColor: 'red',
-          width: 100,
-          height: 300,
-          alignSelf: "flex-start",
+          width: 200,
+          //flexBasis: 100,
+          //flexGrow: 1,
+          flex: -1,
+          height: 100,
         }}>
         </View>
         <View style={{
-          backgroundColor: 'gold',
-          width: 100,
-          height: 200,
-        }}>
-
-        </View>
-        <View style={{
-          backgroundColor: 'green',
+          backgroundColor: 'blue',
           width: 100,
           height: 100,
         }}>
-
+        </View>
+        <View style={{
+          backgroundColor: 'orange',
+          width: 100,
+          height: 100,
+        }}>
         </View>
       </View>
 
