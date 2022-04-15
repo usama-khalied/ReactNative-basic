@@ -54,6 +54,7 @@ export default function App() {
           flex: -1,
           height: 100,
           //bottom: 20,
+
         }}>
         </View>
         <View style={{
@@ -62,14 +63,15 @@ export default function App() {
           height: 100,
           top: 20,
           right: 30,
-          position: 'relative'
+          position: 'absolute'
+
         }}>
         </View>
         <View style={{
           backgroundColor: 'orange',
           width: 100,
           height: 100,
-          top: 40,
+
           // flexShrink: 1,
         }}>
         </View>
