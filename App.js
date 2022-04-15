@@ -53,19 +53,21 @@ export default function App() {
           // flexShrink: 1,
           flex: -1,
           height: 100,
+          //bottom: 20,
         }}>
         </View>
         <View style={{
           backgroundColor: 'blue',
           width: 100,
           height: 100,
-
+          top: 20,
         }}>
         </View>
         <View style={{
           backgroundColor: 'orange',
           width: 100,
           height: 100,
+          top: 40,
           // flexShrink: 1,
         }}>
         </View>
