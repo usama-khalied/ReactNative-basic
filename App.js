@@ -49,10 +49,11 @@ export default function App() {
         <View style={{
           backgroundColor: 'red',
           // width: 200,
-          flexBasis: 200,
+          flexBasis: 100,
           // flexShrink: 1,
-          flex: -1,
+          // flex: -1,
           height: 100,
+
           //bottom: 20,
 
         }}>
@@ -62,9 +63,9 @@ export default function App() {
           width: 100,
           height: 100,
           top: 20,
-          right: 30,
-          position: 'absolute'
-
+          left: 30,
+          position: 'relative',
+          // zIndex: 1,
         }}>
         </View>
         <View style={{
@@ -72,7 +73,6 @@ export default function App() {
           width: 100,
           height: 100,
 
-          // flexShrink: 1,
         }}>
         </View>
       </View>
