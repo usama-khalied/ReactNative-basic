@@ -61,6 +61,8 @@ export default function App() {
           width: 100,
           height: 100,
           top: 20,
+          right: 30,
+          position: 'relative'
         }}>
         </View>
         <View style={{
