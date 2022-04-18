@@ -1,25 +1,16 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import { ImageBackground, SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
 
-// const TRANSITION = ['fade', 'slide', 'none'];
+
 
 export default function App() {
   // console.log(useDimensions());
-  console.log(useDeviceOrientation());
-  // console.log(Dimensions.get('window'));
-  // const windowWidth = Dimensions.get('window').width;
-  // const heigthWidth = Dimensions.get('window').height;
-  const window = useWindowDimensions();
-  // console.log(useDimensions())
-  // const [hidden, sethidden] = useState(false);
+  //console.log(useDeviceOrientation());
 
-  // const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
-  // const changeStatusbarVisibility = () => {
-  //   sethidden(!hidden);
-  //   alert(hidden)
-  // };
+  const window = useWindowDimensions();
+
 
 
   const { landscape } = useDeviceOrientation();
@@ -34,8 +25,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{
-        backgroundColor: 'dodgerblue',
+      {/* <View style={{
+
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -45,13 +36,11 @@ export default function App() {
         flexShrink: 1,
 
       }}>
-
-
+      </View> */}
+      <View>
+        <ImageBackground style={styles.result} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} >  </ImageBackground>
 
       </View>
-
-
-
 
 
 
@@ -63,7 +52,10 @@ const styles = StyleSheet.create({
   container: {
 
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+  result: {
+
   }
 });
 
