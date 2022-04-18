@@ -37,9 +37,10 @@ export default function App() {
 
       }}>
       </View> */}
-      <View>
-        <ImageBackground style={styles.result} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} >  </ImageBackground>
+      <View style={styles.container}>
+        <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover" style={styles.image}>
 
+        </ImageBackground>
       </View>
 
 
@@ -54,7 +55,10 @@ const styles = StyleSheet.create({
     flex: 1,
     // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
-  result: {
+  image: {
+    flex: 1,
+  },
+  text: {
 
   }
 });
