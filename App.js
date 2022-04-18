@@ -25,20 +25,9 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <View style={{
 
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        alignContent: 'center',
-        flexDirection: 'row',
-        // flexWrap: 'wrap'
-        flexShrink: 1,
-
-      }}>
-      </View> */}
-      <View style={styles.container}>
-        <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover" style={styles.image}>
+      <View style={styles.scree}>
+        <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover">
 
         </ImageBackground>
       </View>
@@ -53,7 +42,10 @@ const styles = StyleSheet.create({
   container: {
 
     flex: 1,
-    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+  scree: {
+    flex: 1,
   },
   image: {
     flex: 1,
