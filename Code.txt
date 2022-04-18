@@ -132,3 +132,21 @@
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   }
 });
+
+
+
+
+  // console.log(useDimensions())
+  // const [hidden, sethidden] = useState(false);
+
+  // const [statusbartransition, setstatusbartransition] = useState(TRANSITION[0]);
+  // const changeStatusbarVisibility = () => {
+  //   sethidden(!hidden);
+  //   alert(hidden)
+  // };
+
+
+  // console.log(Dimensions.get('window'));
+  // const windowWidth = Dimensions.get('window').width;
+  // const heigthWidth = Dimensions.get('window').height;
+// const TRANSITION = ['fade', 'slide', 'none'];
