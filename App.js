@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
 } from "react-native";
 // import { useDeviceOrientation } from '@react-native-community/hooks';
-import colors from '../config/'
+
 
 
 
@@ -30,11 +30,6 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
 
-      <View style={styles.scree}>
-        <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover">
-
-        </ImageBackground>
-      </View>
     </SafeAreaView>
   );
 }
@@ -43,13 +38,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    backgroundColor:'blue',
+    justifyContent:'center',
+    alignContent:'center',
   },
-    image: {
-    flex: 2,
-  },
-  scree: {
-    flex: 1,
-  },
+
 
 
 });
