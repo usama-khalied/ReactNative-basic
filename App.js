@@ -28,9 +28,13 @@ export default function App() {
 
 
   return (
-    <SafeAreaView style={styles.container}>
+<View style={styles.container}>   
+<View style={styles.bor}>
 
-    </SafeAreaView>
+
+
+</View>
+</View>
   );
 }
 
@@ -40,9 +44,19 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     backgroundColor:'blue',
     justifyContent:'center',
-    alignContent:'center',
-  },
+    alignItems:'center',
 
+  },
+bor : {
+  width:100,
+  height:100,
+  backgroundColor:'red',
+  borderWidth : 10,
+  borderColor:'yellow',
+  borderRadius:20,
+  borderTopWidth:30,
+  borderTopLeftRadius:50,
+}
 
 
 });
