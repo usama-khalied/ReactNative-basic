@@ -150,3 +150,23 @@
   // const windowWidth = Dimensions.get('window').width;
   // const heigthWidth = Dimensions.get('window').height;
 // const TRANSITION = ['fade', 'slide', 'none'];
+
+
+    <SafeAreaView style={styles.container}>
+
+      <View style={styles.scree}>
+        <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover">
+
+        </ImageBackground>
+      </View>
+    </SafeAreaView>
+      container: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+    image: {
+    flex: 2,
+  },
+  scree: {
+    flex: 1,
+  },
