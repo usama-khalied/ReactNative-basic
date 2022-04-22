@@ -1,6 +1,8 @@
 import React from 'react';
-import { ImageBackground, SafeAreaView, StyleSheet, Button, Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform, TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
-import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import { ImageBackground, SafeAreaView, StyleSheet, Button,
+   Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
+   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+// import { useDeviceOrientation } from '@react-native-community/hooks';
 
 
 
@@ -9,11 +11,11 @@ export default function App() {
   // console.log(useDimensions());
   //console.log(useDeviceOrientation());
 
-  const window = useWindowDimensions();
+  // const window = useWindowDimensions();
 
 
 
-  const { landscape } = useDeviceOrientation();
+  // const { landscape } = useDeviceOrientation();
 
   //Method No 1 
 
