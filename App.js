@@ -1,9 +1,11 @@
 import React from 'react';
-import { ImageBackground, SafeAreaView, StyleSheet, Button,
-   Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
-   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text } from "react-native";
+import {
+  ImageBackground, SafeAreaView, StyleSheet, Button,
+  Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
+  TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
+} from "react-native";
 // import { useDeviceOrientation } from '@react-native-community/hooks';
-
+import colors from '../config/'
 
 
 
@@ -30,40 +32,26 @@ export default function App() {
 
       <View style={styles.scree}>
         <ImageBackground style={styles.image} source={require('./assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')} resizeMode="cover">
-          <View style={styles.small}>
-            <Image style={styles} source={require('./assets/favicon.png')} />
-          </View>
+
         </ImageBackground>
       </View>
-
-
-
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-
-
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+    image: {
+    flex: 2,
   },
   scree: {
     flex: 1,
   },
-  small: {
-    flex: 0.5,
-    justifyContent: 'center',
-    alignItems: 'center'
 
-  },
-  image: {
-    flex: 1,
-  },
-  text: {
 
-  }
 });
 
 
