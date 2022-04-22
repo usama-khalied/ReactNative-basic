@@ -86,3 +86,19 @@ const styles = StyleSheet.create({
     color: '#000',
   }
 });
+
+
+  <View style={styles.small}>
+            <Image style={styles} source={require('./assets/favicon.png')} />
+          </View>
+ 
+  small: {
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center'
+
+  },
+
+  text: {
+
+  }
