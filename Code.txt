@@ -170,3 +170,26 @@
   scree: {
     flex: 1,
   },
+
+
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+bor : {
+  width:100,
+  height:100,
+  backgroundColor:'red',
+  borderWidth : 10,
+  borderColor:'yellow',
+  borderRadius:20,
+  borderTopWidth:30,
+  borderTopLeftRadius:50,
+  elevation:40,
+  shadowColor:'black',
+  shadowOffset: {width : 20 , height : 10},
+  shadowOpacity:1,
+}
