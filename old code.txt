@@ -102,3 +102,10 @@ const styles = StyleSheet.create({
   text: {
 
   }
+<View style={styles.container}>   
+<View style={styles.bor}>
+
+
+
+</View>
+</View>
