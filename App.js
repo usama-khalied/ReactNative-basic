@@ -4,6 +4,7 @@ import {
   Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
 } from "react-native";
+import AppText from './Components/AppText'
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 // import { useDeviceOrientation } from '@react-native-community/hooks';
 
@@ -32,7 +33,7 @@ export default function App() {
 <View style={styles.container}>   
 
 
-<Text style={styles.head}>  I love Allah , and i stand with Palestine</Text>
+<AppText style={styles.head}>  I love Allah , and i stand with Palestine</AppText>
 
 </View>
 
