@@ -5,7 +5,6 @@ import {
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
 } from "react-native";
 import AppText from './Components/AppText'
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 // import { useDeviceOrientation } from '@react-native-community/hooks';
 import Appdiv from './Components/Appdiv'
 
