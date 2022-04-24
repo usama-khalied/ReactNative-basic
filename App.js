@@ -7,7 +7,7 @@ import {
 import AppText from './Components/AppText'
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 // import { useDeviceOrientation } from '@react-native-community/hooks';
-
+import Appdiv from './Components/Appdiv'
 
 
 
@@ -31,14 +31,9 @@ export default function App() {
 
   return (
 <View style={styles.container}>   
-
-
 <AppText style={styles.head}>  I love Allah , and i stand with Palestine</AppText>
-
+<Appdiv style={styles.deev}>   </Appdiv>
 </View>
-
-
-
   );
 }
 
@@ -59,7 +54,11 @@ head : {
   textTransform : 'uppercase',
   textAlign: 'justify',
   lineHeight:40
-
+},
+deev : {
+  height:100,
+  width: 100,
+  backgroundColor: 'red'
 }
 
 });
