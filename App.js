@@ -30,15 +30,14 @@ export default function App() {
 
   return (
 <View style={styles.container}>   
-<View style={styles.bor}>
-<View style={styles.sing}>
 
 
-</View>
-
+<Text style={styles.head}>  I love Allah , and i stand with Palestine</Text>
 
 </View>
-</View>
+
+
+
   );
 }
 
@@ -50,27 +49,15 @@ const styles = StyleSheet.create({
     alignItems:'center',
 
   },
-bor : {
-  width:100,
-  height:100,
-  backgroundColor:'red',
-  // borderWidth : 10,
-  // borderColor:'yellow',
-  // borderRadius:20,
-  // borderTopWidth:30,
-  // borderTopLeftRadius:50,
-  elevation:40,
-  padding: 30,
-  paddingHorizontal:20,
-  paddingLeft:40,
-  shadowColor:'black',
-  shadowOffset: {width : 20 , height : 10},
-  shadowOpacity:1,
-},
-sing : {
-  width:50,
-  height: 50,
-  backgroundColor:'green',
+head : {
+  fontFamily: 'Roboto',
+  fontSize:20,
+  fontWeight:"800",
+  color:'tomato',
+  fontStyle: "italic",
+  textTransform : 'uppercase',
+  textAlign: 'justify',
+  lineHeight:40
 
 }
 
