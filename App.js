@@ -11,16 +11,7 @@ import Appdiv from './Components/Appdiv'
 
 
 export default function App() {
-  // console.log(useDimensions());
-  //console.log(useDeviceOrientation());
 
-  // const window = useWindowDimensions();
-
-
-
-  // const { landscape } = useDeviceOrientation();
-
-  //Method No 1 
 
 
 
@@ -30,6 +21,9 @@ export default function App() {
 
   return (
 <View style={styles.container}>   
+<Appdiv>
+  I  love Allah 
+</Appdiv>
 </View>
   );
 }
