@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text , StyleSheet , Platform } from 'react-native';
+import { Text , StyleSheet , Platform , View } from 'react-native';
 function Appdiv({children}) {
     return (
-        <View style={styles.beech}> {children} </View>
+        <View style={styles.beech1}> {children} </View>
     );
 }
 const styles = StyleSheet.create({
