@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text , StyleSheet , Platform , View } from 'react-native';
+import { Text , StyleSheet  , View } from 'react-native';
 function Appdiv({children}) {
     return (
         <View style={styles.beech1}> {children} </View>
