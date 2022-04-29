@@ -1,11 +1,14 @@
 import React from 'react';
 
-import {ImageBackground , View , Image , StyleSheet} from 'react-native'
+import {ImageBackground , View , Image , Text , StyleSheet} from 'react-native'
 function Welcome(props) {
     return (
 <ImageBackground style={styles.background} source={require('../assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')}>
-    <Image source={}
-    <View style={styles.loginbutton}> Login </View>
+    <View style={styles.design1}>
+    <Image style={styles.design} source={require('../assets/download.jpg')} />
+    <Text style={{color:'white'}}> Logo </Text>
+    </View>
+     <View style={styles.loginbutton}> Login </View>
     <View style={styles.registerbutton}> Login </View>
        </ImageBackground>
 
@@ -17,9 +20,17 @@ background : {
     justifyContent:'flex-end',
     alignItems:'center',
 },
+design : {
+width:100,
+height:100,
+},
+design1 : {
+position:'absolute',
+top:90
+},
 loginbutton : {
     width : "100%",
-    height : 70,
+    height : 40,
     backgroundColor:'blue',
     borderRadius:50,
     display:'flex',
@@ -29,7 +40,7 @@ loginbutton : {
 },    
 registerbutton : {
     width : "100%",
-    height : 70,
+    height : 40,
     backgroundColor:'pink',
     borderRadius:50,
     display:'flex',
