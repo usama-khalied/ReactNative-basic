@@ -4,9 +4,10 @@ import {
   Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
 } from "react-native";
-import AppText from './Components/AppText'
+import Welcome from './app/Screen/Welcome';
+
 // import { useDeviceOrientation } from '@react-native-community/hooks';
-import Appdiv from './Components/Appdiv'
+
 
 
 
@@ -20,11 +21,7 @@ export default function App() {
 
 
   return (
-<View style={styles.container}>   
-<Appdiv>
-  I  love Allah 
-</Appdiv>
-</View>
+<Welcome/>
   );
 }
 
