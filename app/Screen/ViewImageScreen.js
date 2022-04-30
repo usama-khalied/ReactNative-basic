@@ -6,7 +6,7 @@ function ViewImageScreen(props) {
 <>
 
 <View style={styles.container}>
-
+<View style={styles.div}>  </View>
 <Image style={styles.img} source={require('../assets/wallpaper.jpg')}/>
 </View>
 </>
