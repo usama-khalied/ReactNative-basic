@@ -44,7 +44,7 @@ backgroundColor :color.primary,
 
     },
     container : {
-    backgroundColor: "white",
+    backgroundColor: color.white,
     flex :1,
     
     },
