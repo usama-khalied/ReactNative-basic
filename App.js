@@ -1,28 +1,27 @@
 import React from 'react';
 import {
   ImageBackground, SafeAreaView, StyleSheet, Button,
-  Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,
-  TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text
+  Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,   
+  TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text 
 } from "react-native";
+
+import { useAccessibilityInfo } from '@react-native-community/hooks'
+
 import ViewImageScreen from './app/Screen/ViewImageScreen';
 import Welcome from './app/Screen/Welcome';
 
-// import { useDeviceOrientation } from '@react-native-community/hooks';
+
 
 
 
 
 export default function App() {
 
-
-
-
-
-
-
-
   return (
-<ViewImageScreen/>
+<View style={styles.container}>
+  <ViewImageScreen>I Love Allah</ViewImageScreen>
+  <Text style={styles.sty}>Muhammad</Text>
+</View>
   );
 }
 
