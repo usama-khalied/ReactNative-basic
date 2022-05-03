@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text 
 } from "react-native";
 
-import { useAccessibilityInfo } from '@react-native-community/hooks'
+import { useDeviceOrientation , useDimensions } from '@react-native-community/hooks'
 
 import ViewImageScreen from './app/Screen/ViewImageScreen';
 import Welcome from './app/Screen/Welcome';
@@ -17,6 +17,8 @@ import Welcome from './app/Screen/Welcome';
 
 export default function App() {
 
+  const {landscape}  = useDeviceOrientation()
+console.log(landscape)
   return (
 <View style={styles.container}>
   <ViewImageScreen>I Love Allah</ViewImageScreen>
@@ -31,9 +33,11 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     justifyContent:'center',
     alignItems:'center',
-
+   
   },
-
+sty : {
+fontSize: landscape ? 40 : 20,
+}
 
 });
 
