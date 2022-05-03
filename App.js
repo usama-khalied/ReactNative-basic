@@ -17,8 +17,8 @@ import Welcome from './app/Screen/Welcome';
 
 export default function App() {
 
-  const {landscape}  = useDeviceOrientation()
-console.log(landscape)
+const {portrait}    = useDeviceOrientation();
+console.log(portrait)
   return (
 <View style={styles.container}>
   <ViewImageScreen>I Love Allah</ViewImageScreen>
@@ -30,14 +30,13 @@ console.log(landscape)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     justifyContent:'center',
     alignItems:'center',
    
   },
-sty : {
-fontSize: landscape ? 40 : 20,
-}
+
 
 });
 
