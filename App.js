@@ -5,11 +5,11 @@ import {
   TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text 
 } from "react-native";
 
-import { useDeviceOrientation , useDimensions } from '@react-native-community/hooks'
+import { useDeviceOrientation ,   useDimensions } from '@react-native-community/hooks'
 
 import ViewImageScreen from './app/Screen/ViewImageScreen';
 import Welcome from './app/Screen/Welcome';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 
@@ -17,12 +17,13 @@ import Welcome from './app/Screen/Welcome';
 
 export default function App() {
 
-const {portrait}    = useDeviceOrientation();
-console.log(portrait)
+
+
   return (
 <View style={styles.container}>
   <ViewImageScreen>I Love Allah</ViewImageScreen>
   <Text style={styles.sty}>Muhammad</Text>
+<MaterialCommunityIcons name='heart' size={24} color="red"/>
 </View>
   );
 }
