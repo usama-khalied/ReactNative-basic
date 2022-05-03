@@ -19,7 +19,7 @@ function ViewImageScreen({children}) {
 }
 const styles = StyleSheet.create({
     sty2 : {
-        fontSize:50,
+        fontSize:Platform.OS==="android" ? 60 : 20,
     }
 })
 export default ViewImageScreen;
