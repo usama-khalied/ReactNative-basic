@@ -17,9 +17,22 @@ function ViewImageScreen({children}) {
 </>
     );
 }
+
 const styles = StyleSheet.create({
+
     sty2 : {
-        fontSize:Platform.OS==="android" ? 60 : 20,
+       
+        color: "tomato",
+        ...Platform.select({
+            ios: {
+                fontSize :20,
+                fontFamily :  "Avenir",
+               },
+            android : {
+                fontSize :30,
+                fontFamily : "Roboto"
+            }
+        })
     }
 })
 export default ViewImageScreen;
