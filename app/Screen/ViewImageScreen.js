@@ -21,7 +21,7 @@ function ViewImageScreen({children}) {
 const styles = StyleSheet.create({
 
     sty2 : {
-       
+ 
     }
 })
 export default ViewImageScreen;
