@@ -193,3 +193,22 @@ bor : {
   shadowOffset: {width : 20 , height : 10},
   shadowOpacity:1,
 }
+
+<>
+<Text style={styles.sty2}>{children}</Text>
+
+</>
+    sty2 : {
+       
+        color: "tomato",
+        ...Platform.select({
+            ios: {
+                fontSize :20,
+                fontFamily :  "Avenir",
+               },
+            android : {
+                fontSize :30,
+                fontFamily : "Roboto"
+            }
+        })
+    }
