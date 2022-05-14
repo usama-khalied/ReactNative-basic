@@ -1,49 +1,48 @@
 import React from 'react';
 import {
-  ImageBackground, SafeAreaView, StyleSheet, Button,
-  Alert, StatusBar, Dimensions, useWindowDimensions, TouchableOpacity, Platform,   
-  TouchableWithoutFeedback, TouchableNativeFeedback, View, Image, Text 
+    ImageBackground,
+    SafeAreaView,
+    StyleSheet,
+    Button,
+    Alert,
+    StatusBar,
+    Dimensions,
+    useWindowDimensions,
+    TouchableOpacity,
+    Platform,
+    TouchableWithoutFeedback,
+    TouchableNativeFeedback,
+    View,
+    Image,
+    Text
 } from "react-native";
-
-import { useDeviceOrientation ,   useDimensions } from '@react-native-community/hooks'
+import { useDeviceOrientation, useDimensions } from '@react-native-community/hooks'
+import { AntDesign } from '@expo/vector-icons'; 
 
 import ViewImageScreen from './app/Screen/ViewImageScreen';
-import Welcome from './app/Screen/Welcome';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import AppButton from './app/Screen/AppButton';
 
 
 
 
 export default function App() {
 
+return(
 
-
-  return (
 <View style={styles.container}>
-  <ViewImageScreen>I Love Allah</ViewImageScreen>
-  <Text style={styles.sty}>Muhammad</Text>
-<MaterialCommunityIcons name='heart' size={24} color="red"/>
+<ViewImageScreen>I Love Allah<AntDesign name="heart" size={24} color="red" />
+</ViewImageScreen>
+<AppButton title='Click me' onPress={() => console.log("Chal gaya")} /> 
 </View>
-  );
+)
+    }
+
+    const styles = StyleSheet.create({
+    container : {
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
 
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-    justifyContent:'center',
-    alignItems:'center',
-   
-  },
-
-
-});
-
-
-
-
-
-
-
+    });
