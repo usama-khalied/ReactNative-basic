@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {ImageBackground , View , Image , Text , StyleSheet} from 'react-native'
-function Welcome(props) {
+import AppButton from './AppButton';
+function Welcome() {
     return (
 <ImageBackground style={styles.background} source={require('../assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')}>
     <View style={styles.design1}>
@@ -9,6 +10,8 @@ function Welcome(props) {
     <Text style={{color:'white'}}> Logo </Text>
     </View>
      <View style={styles.loginbutton}> Login </View>
+     <AppButton title="Login" />
+
     <View style={styles.registerbutton}> Login </View>
        </ImageBackground>
 
@@ -28,16 +31,16 @@ design1 : {
 position:'absolute',
 top:90
 },
-loginbutton : {
-    width : "100%",
-    height : 40,
-    backgroundColor:'blue',
-    borderRadius:50,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
-    color : 'white'
-},    
+// loginbutton : {
+//     width : "100%",
+//     height : 40,
+//     backgroundColor:'blue',
+//     borderRadius:50,
+//     display:'flex',
+//     justifyContent:'center',
+//     alignItems:'center',
+//     color : 'white'
+// },    
 registerbutton : {
     width : "100%",
     height : 40,
