@@ -19,8 +19,6 @@ import {
 import { useDeviceOrientation, useDimensions } from '@react-native-community/hooks'
 import { AntDesign } from '@expo/vector-icons'; 
 
-import ViewImageScreen from './app/Screen/ViewImageScreen';
-import AppButton from './app/Screen/AppButton';
 import Welcome from './app/Screen/Welcome';
 
 
