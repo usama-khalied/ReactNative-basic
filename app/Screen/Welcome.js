@@ -4,15 +4,14 @@ import {ImageBackground , View , Image , Text , StyleSheet} from 'react-native'
 import AppButton from './AppButton';
 function Welcome() {
     return (
-<ImageBackground style={styles.background} source={require('../assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')}>
+<ImageBackground
+ style={styles.background}
+ source={require('../assets/tomas-malik-MJ9px5L-opg-unsplash.jpg')}>
     <View style={styles.design1}>
     <Image style={styles.design} source={require('../assets/download.jpg')} />
-    <Text style={{color:'white'}}> Logo </Text>
+    <Text style={{color:'white'}}>Logo</Text>
     </View>
-     <View style={styles.loginbutton}> Login </View>
-     <AppButton title="Login" />
-
-    <View style={styles.registerbutton}> Login </View>
+     <View style={styles.registerbutton}><Text>Login</Text></View>
        </ImageBackground>
 
     );
