@@ -5,10 +5,8 @@ import color from '../config/color';
 
 function AppButton({title}) {
     return (
-        <TouchableOpacity style={styles.button}>
-        <View>
+        <TouchableOpacity style={styles.button}>    
         <Text style={styles.text}>{title}</Text>
-        </View>
         </TouchableOpacity>
     );
 }
